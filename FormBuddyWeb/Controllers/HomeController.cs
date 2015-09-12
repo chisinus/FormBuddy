@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FormBuddyWeb.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,15 @@ namespace FormBuddyWeb.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Index(LoginModel login)
+        {
+            if (UserAgent.ValidateUser(login))
+                Redirect("");
+
+            ModelState.AddModelError("NotMatch", "The user name and password do not match.");
         }
     }
 }
