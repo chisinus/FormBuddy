@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormBuddyWeb", "FormBuddyWe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormBuddyWeb.Tests", "FormBuddyWeb.Tests\FormBuddyWeb.Tests.csproj", "{F1806405-3A7B-4134-ACF2-5A6E6C336A99}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Support", "Support\Support.xproj", "{DC69D06B-A19F-43F3-A6E7-F792DD640CDF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F1806405-3A7B-4134-ACF2-5A6E6C336A99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1806405-3A7B-4134-ACF2-5A6E6C336A99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1806405-3A7B-4134-ACF2-5A6E6C336A99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC69D06B-A19F-43F3-A6E7-F792DD640CDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC69D06B-A19F-43F3-A6E7-F792DD640CDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC69D06B-A19F-43F3-A6E7-F792DD640CDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC69D06B-A19F-43F3-A6E7-F792DD640CDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
