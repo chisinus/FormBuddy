@@ -6,13 +6,16 @@ using System.Web;
 
 namespace FormBuddyWeb.Models
 {
-    public class LoginModel
+    public class LoginViewModel
     {
         [Display(Name ="User Name")]
         [Required]
-        public string Username { get; set; }
+        public string UserName { get; set; }
+
         [Display(Name ="Password")]
         [Required]
         public string Password { get; set; }
+
+        public bool RememberMe { get; set; }
     }
 }
