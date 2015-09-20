@@ -46,9 +46,24 @@ namespace FormBuddyWeb.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ViewResult Register()
+        {
+            ViewBag.SecurityQuestions = MiscAgent.GetSecurityQuestions();
+
+            return View();
+        }
+
+        [HttpPost]
         public ActionResult Register(RegisterViewModel register)
         {
-            return View();
+            //if (!ModelState.IsValid)
+            //{
+            //    ViewBag.SecurityQuestions = MiscAgent.GetSecurityQuestions();
+            //    return View();
+            //}
+
+            return View("Register_Confirm", register);
         }
     }
 }

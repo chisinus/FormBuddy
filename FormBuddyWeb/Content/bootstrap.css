@@ -1756,6 +1756,11 @@ textarea.form-control {
   margin-bottom: 15px;
 }
 
+.form-group.required .control-label:after { 
+   content:"*";
+   color:red;
+}
+
 .radio,
 .checkbox {
   display: block;

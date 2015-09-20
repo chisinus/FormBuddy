@@ -1,1 +1,51 @@
-﻿
+﻿@model FormBuddyWeb.Models.RegisterViewModel
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create A New User Account</h2>
+
+Please fill in all required fields and click the Create Account button to submit your request. The Email Address will be your login ID.
+
+@Html.ValidationSummary()
+
+@using (Html.BeginForm())
+{
+    <div class="form-group required">
+        <label class="col-md-2 text-right control-label">First Name:</label>
+        <div class="col-md-12">@Html.EditorFor(x=>x.Firstname)</div>
+    </div>
+    <div class="form-group required">
+        <label class="col-md-2 text-right control-label">Last Name:</label>
+        <div class="col-md-12">@Html.EditorFor(x => x.Lastname)</div>
+    </div>
+    <div class="form-group required">
+        <label class="col-md-2 text-right control-label">Email:</label>
+        <div class="col-md-12">@Html.EditorFor(x => x.Email)</div>
+    </div>
+    <div class="form-group required">
+        <label class="col-md-2 text-right control-label">Password:</label>
+        <div class="col-md-12">@Html.EditorFor(x => x.Password)</div>
+    </div>
+    <div class="form-group required">
+        <label class="col-md-2 text-right control-label">Confirm Password:</label>
+        <div class="col-md-12">@Html.EditorFor(x => x.Password)</div>
+    </div>
+    <div class="form-group required">
+        <label class="col-md-2 text-right control-label">Security Quesiton:</label>
+        <div class="col-md-12">@Html.DropDownListFor(x => x.SecurityQuestionID, new SelectList(ViewBag.SecurityQuestions, "Value", "Text"), "Select Security Question")</div>
+    </div>
+    <div class="form-group required">
+        <label class="col-md-2 text-right control-label">Answer:</label>
+        <div class="col-md-12">@Html.EditorFor(x => x.SecurityQuestionAnswer)</div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            @Html.ActionLink("Submit", "Register")
+            @Html.ActionLink("Cancel", "Index")
+        </div>
+    </div>
+}
