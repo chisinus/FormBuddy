@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FormBuddyWeb.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,9 +7,19 @@ using System.Web.Mvc;
 
 namespace FormBuddyWeb.BusinessLogics
 {
-    public class MiscAgent
+    public class MiscAgent : IMiscRepository
     {
-        public static List<SelectListItem> GetSecurityQuestions()
+        public IEnumerable<SelectListItem> SecurityQuestions
+        {
+            get
+            {
+                // get from db
+                return null;
+            }
+        }
+
+        // is this necessary if we have above property?
+        public List<SelectListItem> GetSecurityQuestions()
         {
             List<SelectListItem> ret = new List<SelectListItem>()
             {

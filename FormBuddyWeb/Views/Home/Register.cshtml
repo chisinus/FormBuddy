@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Create A New User Account</h2>
+<h4>Create A New User Account</h4>
 
 Please fill in all required fields and click the Create Account button to submit your request. The Email Address will be your login ID.
 
@@ -44,8 +44,8 @@ Please fill in all required fields and click the Create Account button to submit
 
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-            @Html.ActionLink("Submit", "Register")
-            @Html.ActionLink("Cancel", "Index")
+            <input class="btn btn-success" type="submit" value="Submit RSVP" />
+            @Html.ActionLink("Cancel", "Index", null, new { @class = "btn btn-success" })
         </div>
     </div>
 }
