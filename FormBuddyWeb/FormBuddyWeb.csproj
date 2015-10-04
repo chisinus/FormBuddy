@@ -202,7 +202,9 @@
     <Compile Include="BusinessLogics\FormBuddyDependencyResolver.cs" />
     <Compile Include="BusinessLogics\MiscAgent.cs" />
     <Compile Include="BusinessLogics\UserAgent.cs" />
-    <Compile Include="BusinessObjects\FBWDBContext.cs" />
+    <Compile Include="BusinessObjects\tblDict_SecurityQuestion.cs" />
+    <Compile Include="BusinessObjects\tblUser.cs" />
+    <Compile Include="DAL\FBWDBContext.cs" />
     <Compile Include="Controllers\api\LoginController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">

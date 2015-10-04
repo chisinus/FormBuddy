@@ -9,7 +9,7 @@ namespace FormBuddyWeb.Interfaces
 {
     public interface IMiscRepository
     {
-        IEnumerable<SelectListItem> SecurityQuestions { get; }
+        //IEnumerable<SelectListItem> SecurityQuestions { get; }
 
         List<SelectListItem> GetSecurityQuestions();
     }

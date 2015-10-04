@@ -8,6 +8,7 @@ using FormBuddyWeb;
 using FormBuddyWeb.Controllers;
 using Moq;
 using FormBuddyWeb.Interfaces;
+using FormBuddyWeb.Tests.BusinessLogic_Repository;
 
 namespace FormBuddyWeb.Tests.Controllers
 {
@@ -18,7 +19,7 @@ namespace FormBuddyWeb.Tests.Controllers
         public void Index()
         {
             // Arrange
-            Mock<IMiscRepository> miscMock = new Mock<IMiscRepository>();
+            Mock<BLR_MiscAgent> miscMock = new Mock<BLR_MiscAgent>();
             Mock<IUserRepository> userMock = new Mock<IUserRepository>();
             HomeController controller = new HomeController(userMock.Object, miscMock.Object);
 
@@ -27,6 +28,7 @@ namespace FormBuddyWeb.Tests.Controllers
 
             // Assert
             Assert.IsNotNull(result);
+            Assert.AreEqual(result.ViewName, "Index.cshtml");
         }
 
         [TestMethod]

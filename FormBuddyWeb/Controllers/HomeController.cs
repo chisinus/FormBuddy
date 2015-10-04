@@ -1,8 +1,10 @@
 ﻿using FormBuddyWeb.BusinessLogics;
+using FormBuddyWeb.BusinessObjects;
 using FormBuddyWeb.Interfaces;
 using FormBuddyWeb.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -22,7 +24,7 @@ namespace FormBuddyWeb.Controllers
         }
 
         // GET: Home
-        public ActionResult Index()
+        public ViewResult Index()
         {
             return View();
         }

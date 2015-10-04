@@ -13,7 +13,8 @@ namespace FormBuddyWeb.Controllers.api
         [HttpPost]
         public bool ValidateUser(LoginViewModel login)
         {
-            return UserAgent.ValidateUser(login);
+            //return UserAgent.ValidateUser(login);
+            return true;
         }
     }
 }
